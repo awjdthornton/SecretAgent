@@ -116,3 +116,8 @@ nav ul {
 .info span {
   display:block;
 }
+
+footer {
+  margin-top: 4rem;
+  padding: 2rem 0;
+}
