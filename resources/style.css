@@ -4,6 +4,11 @@ html {
   font-family: helvetica;
 }
 
+body {
+  font-family: "Helvetica", sans-serif;
+  line-height: 1.4;
+}
+
 header, footer {
   background-color: black;
   color: white;
@@ -42,6 +47,8 @@ h1 {
 .main-banner {
   background-image: url("images/moto.jpeg");
   background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
   height: 25rem;
 }
 
@@ -99,7 +106,6 @@ nav ul {
 
 .business-info {
   display: flex;
-  align-items: center;
   justify-content: space-between;
   margin-top: 3rem;
 }
@@ -113,11 +119,66 @@ nav ul {
   background-color: black;
   color: white;
 }
+
 .info span {
-  display:block;
+  display: block;
 }
 
 footer {
   margin-top: 4rem;
   padding: 2rem 0;
+}
+
+#mini-nav {
+  display: none;
+}
+
+@media only screen and (max-width: 1024px) {
+  #full-nav {
+    display: none;
+  }
+  #mini-nav {
+    display: block;
+    text-align: center;
+  }
+  .glasses {
+    display: none;
+  }
+  .product {
+    width: 47%;
+  }
+}
+
+@media only screen and (max-width: 470px) {
+  .main-banner {
+    height: 15rem;
+  }
+  h1 {
+    font-size: 1rem;
+  }
+  h4 {
+    font-size: .77rem;
+  }
+  .arrival {
+    padding: 1rem 0 1rem .5rem;
+    top: 10rem;
+    max-width: 100%;
+  }
+  .watch {
+    display: none;
+  }
+  .products, .business-info {
+    flex-wrap: wrap;
+  }
+  .product {
+    width: 90%;
+    margin: auto;
+  }
+  .info {
+    width: 90%;
+    margin: .5rem auto;
+  }
+  footer {
+    text-align: center;
+  }
 }
